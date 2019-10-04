@@ -1,15 +1,9 @@
-
-
-    var x = myQuestion.question;
-    document.getElementById("test").innerHTML = x;
-    console.log(myQuestion);
-
+var userAntal = document.getElementById("antal").innerHTML;
 function hideMain(){
 document.getElementById("main").style.display = "none";
 console.log("test");
 document.getElementById("question").style.display ="block";
 };
-
 
 
 
@@ -22,7 +16,7 @@ var myQuestion = [
             c: "1969"
                 },
         correctAnswer: "c"
-    },
+    }, 
     {
         question: "Vilken är den starkaste chilin i världen?",
         answer: {
@@ -31,7 +25,7 @@ var myQuestion = [
             c: "Carolina Reaper"
                 },
         correctAnswer: "c"
-    },
+    }, 
     {
         question: "Vilket år föll berlinmuren?",
         answer: {
@@ -43,4 +37,27 @@ var myQuestion = [
     }
 
 ];
+
+for(i=0; i<=userAntal;){
+document.getElementById("test").innerHTML = myQuestion[i].question;
+document.getElementById("label1").innerHTML = myQuestion[i].answer.a;
+document.getElementById("label2").innerHTML = myQuestion[i].answer.b;
+document.getElementById("label3").innerHTML = myQuestion[i].answer.c;
+i++;
+};
+
+function userSubmit(){
+
+    for(i=0; i<=userAntal;){
+        document.getElementById("test").innerHTML = myQuestion[i].question;
+        document.getElementById("label1").innerHTML = myQuestion[i].answer.a;
+        document.getElementById("label2").innerHTML = myQuestion[i].answer.b;
+        document.getElementById("label3").innerHTML = myQuestion[i].answer.c;
+        i++;
+        };
+}
+
+
+
+
 
