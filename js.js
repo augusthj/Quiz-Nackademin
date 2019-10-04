@@ -1,12 +1,46 @@
-/*
-• Skriv en fungerande Quiz-applikation. Visa på sidan hur många frågor som är besvarade.
-• Låt användaren bestämma hur många frågor som ska visas.
-• Skriv klassen Quiz. Den ska hålla reda på användarens namn, frågorna som ingår och hur många frågor som har besvarats korrekt/felaktigt.
-• Skriv klassen Question. Den ska hålla reda på frågekategori, fråga, svarsalternativ och om svarsalternativet är korrekt eller inte. (Hur kan vi lösa det?)
-• Lämna in projektet som ett git-repo.
-• VG: Klassen ska ha en correct-metod, som tar en array som parameter. Arrayen ska innehålla de DOM-element som hör till frågan och kontrollera vilka alternativ som är korrekt ifyllda.
-*/
-function antal(){
-var x = document.getElementById("antalx").value;
-alert("Du har valt: "+x+" frågor.");
-}
+
+
+    var x = myQuestion.question;
+    document.getElementById("test").innerHTML = x;
+    console.log(myQuestion);
+
+function hideMain(){
+document.getElementById("main").style.display = "none";
+console.log("test");
+document.getElementById("question").style.display ="block";
+};
+
+
+
+
+var myQuestion = [
+    {
+        question: "Vilket år landade första människan på månen?",
+        answer: {
+            a: "1946",
+            b: "1957",
+            c: "1969"
+                },
+        correctAnswer: "c"
+    },
+    {
+        question: "Vilken är den starkaste chilin i världen?",
+        answer: {
+            a: "Ghost pepper",
+            b: "Trinidad Moruga Scorpion",
+            c: "Carolina Reaper"
+                },
+        correctAnswer: "c"
+    },
+    {
+        question: "Vilket år föll berlinmuren?",
+        answer: {
+            a: "1991",
+            b: "1989",
+            c: "1993"
+                 },
+        correctAnswer: "a"
+    }
+
+];
+

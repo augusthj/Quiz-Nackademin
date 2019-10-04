@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -9,10 +10,16 @@
                 <h1>Spela Quiz</h1>
             </div>
             <div id="main">
-                    <p>Hur mångra frågor vil du besvara?</p>
-                    <input type="text" id="antalx">
-                    <button onclick="antal()">Submit</button>
-                    <p id="demo"></p>
+                    <p>Hur mångra frågor vill du besvara?</p>
+                    <input type="text" id="antal">
+                    <input type="button" id="submitB" onclick="hideMain();" value="Submit">
+            </div>
+            <div id="question">
+                <tr>
+                    <td id="showQuest">
+                    <p id="test"> hej</p>
+                    </td>
+                </tr>
             </div>
         </div>
         <script src="js.js"></script>
