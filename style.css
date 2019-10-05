@@ -20,8 +20,116 @@
     text-align: center;
     display: none;
 }
-.input {
-    display: block;
+#question1{
+    display: hide;
+    position: relative;
+    padding-right: 20%;
+    text-align: center;;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  #question2{
+    display: hide;
+    position: relative;
+    padding-right: 20%;
+    text-align: center;;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  #question3{
+    display: hide;
+    position: relative;
+    padding-right: 20%;
+    text-align: center;;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  #question4{
+    display: hide;
+    position: relative;
+    padding-right: 20%;
+    text-align: center;;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  #question5{
+    display: hide;
+    position: relative;
+    padding-right: 20%;
+    text-align: center;;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  #question6{
+    display: hide;
+    position: relative;
+    padding-right: 20%;
+    text-align: center;;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  #question7{
+    display: hide;
+    position: relative;
+    padding-right: 20%;
+    text-align: center;;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  #question8{
+    display: hide;
+    position: relative;
+    padding-right: 20%;
+    text-align: center;;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  #question9{
+    display: hide;
+    position: relative;
+    padding-right: 20%;
+    text-align: center;;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  #question10{
+    display: hide;
+    position: relative;
+    padding-right: 20%;
+    text-align: center;;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  #question11{
+    display: hide;
+    position: relative;
+    padding-right: 20%;
+    text-align: center;;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  #question12{
+    display: hide;
+    position: relative;
+    padding-right: 20%;
+    text-align: center;;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  #question13{
+    display: hide;
     position: relative;
     padding-right: 20%;
     text-align: center;;
