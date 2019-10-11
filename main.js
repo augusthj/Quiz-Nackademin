@@ -34,3 +34,21 @@ function hideMain(){
     quiz.name = name;
     quiz.amount = amount;
 }
+function loadJSON(file, callback) {
+    var xobj = new XMLHttpRequest();
+    xobj.overrideMimeType("application/json");
+    xobj.open('GET', 'https://www.mocky.io/v2/5da0ac863000007000f8a037', true);
+    xobj.onreadystatechange = function() {
+      if (xobj.readyState == 4 && xobj.status == "200") {
+        callback(xobj.responseText);
+      }
+    };
+    xobj.send(null);
+  }
+
+  var myQuestions = "";
+  loadJSON('https://www.mocky.io/v2/5da0ac863000007000f8a037', function(response) {
+     myQuestions = JSON.parse(response);
+  console.log(myQuestions);
+  });
+  

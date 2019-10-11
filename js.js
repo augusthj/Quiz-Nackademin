@@ -117,21 +117,9 @@ function check(){
     else if(checkB2.checked && checkB2.value == question[i].correctAnswer){
         userCorrect += 1;
     }
-    else if(checkB3.checked && checkB3.value == question[i].correctAnswer){
+    else if(checkB3.checked  && checkB3.value == question[i].correctAnswer){
         userCorrect += 1;
     }
     console.log(userCorrect);
     };
 };
-
-console.log(userCorrect);
-function tis(){
-var summa = ["c", "c", "a"];
-var summas = [];
-if(checkB1.checked){
- summas.push(checkB1.value);
- console.log(summas);
-}
-};
-
-//skapa en array
