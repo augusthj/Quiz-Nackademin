@@ -6,6 +6,7 @@ class Quiz{
         this.questions = [];
         this.rightCounter = 0;
         this.wrongCounter = 0;
+        this.amount = 0;
     }
 }
 
@@ -25,7 +26,11 @@ class Answer{
         this.isCorrect = false;
     }
 }
-
+var quiz = new Quiz();
 function hideMain(){
-    
+    document.getElementById("main").style.display = "none";
+    var name = document.getElementById("namn").value;
+    var amount = document.getElementById("antal").value;
+    quiz.name = name;
+    quiz.amount = amount;
 }
