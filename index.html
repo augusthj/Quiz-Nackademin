@@ -6,26 +6,28 @@
     </head>
     <body>
         <div id="container">
-            <div id="header">
-                <h1>Spela Quiz</h1>
-            </div>
-            <div id="main">
-                    <p>Hur mångra frågor vill du besvara?</p>
-                    <input type="text" id="antal">
-                    <input type="button" id="submitB" onclick="hideMain();" value="Submit">
-            </div>
-            <div id="question">
-                <tr>
-                    <td id="showQuest">
-                    <p id="test"></p>
+                <div id="header">
+                        <h1>Spela Quiz</h1>
+                </div>
+                <div id="main">
+                        <form id="setup">
+                                <p>Hur mångra frågor vill du besvara?</p>
+                                <input type="text" id="antal">
+                                <input type="button" id="submitB" onclick="hideMain();" value="Submit">
+                        </form>
+                </div>
+                <div id="question">
+                        <tr>      
+                        <td id="showQuest">
+                        <p id="test"></p>
 
-                    <div id="submit">
-                            <input type="button" value="Submit" onclick="tis();">
-                    </div>
-                    </td>
-                </tr>
-            </div>
+                        <div id="submit">
+                                <input type="button" value="Submit" onclick="hideMain();">
+                        </div>
+                        </td>
+                        </tr>
+                </div>
         </div>
-        <script src="js.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>
