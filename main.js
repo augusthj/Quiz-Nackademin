@@ -8,6 +8,14 @@ class Quiz{
         this.wrongCounter = 0;
         this.amount = 0;
     }
+
+    loadQuestions(incomingQuestions) {
+        for(var i=0; i<this.amount; i++){
+         this.questions.push(incomingQuestions[i]);
+
+        }
+        console.log(this.questions);
+    }
 }
 
 //Den ska hålla reda på frågekategori, 
@@ -33,7 +41,24 @@ function hideMain(){
     var amount = document.getElementById("antal").value;
     quiz.name = name;
     quiz.amount = amount;
+    quiz.loadQuestions(myQuestions);
+    document.getElementById("question").style.display = "block";
+    showQuestion();
+
 }
+
+function showQuestion(){
+    document.getElementById("ask").innerHTML = quiz.questions[0].question;
+    document.getElementById("la").innerHTML = quiz.questions[0].answer.a;
+    document.getElementById("lb").innerHTML = quiz.questions[0].answer.b;
+    document.getElementById("lc").innerHTML = quiz.questions[0].answer.c;
+    document.getElementById("ld").innerHTML = quiz.questions[0].answer.d;
+
+}
+
+
+
+
 function loadJSON(file, callback) {
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
@@ -49,6 +74,5 @@ function loadJSON(file, callback) {
   var myQuestions = "";
   loadJSON('https://www.mocky.io/v2/5da0ac863000007000f8a037', function(response) {
      myQuestions = JSON.parse(response);
-  console.log(myQuestions);
   });
   

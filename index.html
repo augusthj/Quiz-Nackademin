@@ -12,8 +12,8 @@
                 <div id="main">
                         <form id="setup">
                                 <p>Skriv in ditt namn och hur mångra frågor du vill besvara</p>
-                                <input type="text" id="namn"> 
-                                <input type="text" id="antal">
+                                <input type="text" id="namn" value="august"> 
+                                <input type="text" id="antal" value="3">
                                 <input type="button" id="submitB" onclick="hideMain();" value="Submit">
                         </form>
                 </div>
@@ -23,7 +23,12 @@
                         <p id="test"></p>
 
                         <div id="submit">
-                                <input type="button" value="Submit" onclick="hideMain();">
+                                <input type="button" value="Submit" onclick="showQuestion();">
+                                <p id="ask">fråge text</p>
+                                <input type="checkbox" id="a"><label id="la" for="a">alternativ a</label><br>
+                                <input type="checkbox" id="b"><label id="lb" for="b">alternativ b</label><br>
+                                <input type="checkbox" id="c"><label id="lc" for="c">alternativ c</label><br>
+                                <input type="checkbox" id="d"><label id="ld" for="d">alternativ d</label>
                         </div>
                         </td>
                         </tr>
