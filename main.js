@@ -7,6 +7,7 @@ class Quiz{
         this.rightCounter = 0;
         this.wrongCounter = 0;
         this.amount = 0;
+        this.current_question = 0;
     }
 
     loadQuestions(incomingQuestions) {
@@ -48,12 +49,14 @@ function hideMain(){
 }
 
 function showQuestion(){
-    document.getElementById("ask").innerHTML = quiz.questions[0].question;
-    document.getElementById("la").innerHTML = quiz.questions[0].answer.a;
-    document.getElementById("lb").innerHTML = quiz.questions[0].answer.b;
-    document.getElementById("lc").innerHTML = quiz.questions[0].answer.c;
-    document.getElementById("ld").innerHTML = quiz.questions[0].answer.d;
-
+    if(quiz.current_question <= quiz.amount){
+    document.getElementById("ask").innerHTML = quiz.questions[quiz.current_question].question;
+    document.getElementById("la").innerHTML = quiz.questions[quiz.current_question].answer.a;
+    document.getElementById("lb").innerHTML = quiz.questions[quiz.current_question].answer.b;
+    document.getElementById("lc").innerHTML = quiz.questions[quiz.current_question].answer.c;
+    document.getElementById("ld").innerHTML = quiz.questions[quiz.current_question].answer.d;
+    quiz.current_question += 1;
+    }
 }
 
 
