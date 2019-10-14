@@ -17,11 +17,6 @@ class Quiz{
             newQuestion.ask = incomingQuestions[i].question;
             newQuestion.answers = incomingQuestions[i].answer;
             newQuestion.correctAnswer = incomingQuestions[i].correctAnswer;
-            console.log(newQuestion.answers);
-            console.log(incomingQuestions[i]);
-            console.log(newQuestion.correctAnswer);
-
-
 
 
             this.questions.push(newQuestion);
@@ -76,7 +71,35 @@ function showRestOfQuestion(){
     console.log(document.getElementById("b").checked);
     console.log(document.getElementById("c").checked);
     console.log(document.getElementById("d").checked);
-    console.log()
+    console.log(quiz.questions[quiz.current_question].correctAnswer);
+
+    // If a is right answer,
+    // and you have answer a is right.
+    // And you have answer b is wrong.
+    // And you have answer c is wrong.
+    // And you have answer d is wrong.
+    // Then you get the answer right.
+    if ( quiz.questions[quiz.current_question].correctAnswer == "a"){
+
+    }else if(quiz.questions[quiz.current_question].correctAnswer == "b"){
+
+    }else if ( quiz.questions[quiz.current_question].correctAnswer == "c"){
+        if(document.getElementById("a").checked == false &&
+        document.getElementById("b").checked == false &&
+        document.getElementById("c").checked == true &&
+        document.getElementById("d").checked == false  ){
+            alert("rätt");
+        }
+    }else if ( quiz.questions[quiz.current_question].correctAnswer == ["a", "b"]){
+
+    }else if ( quiz.questions[quiz.current_question].correctAnswer == ["a", "c"]){
+
+    }else if ( quiz.questions[quiz.current_question].correctAnswer == ["b","c"]){
+
+    }else if ( quiz.questions[quiz.current_question].correctAnswer == ["a","b","c"]){
+        
+    }
+
     if(quiz.current_question < quiz.amount){
         document.getElementById("ask").innerHTML = quiz.questions[quiz.current_question].ask;
         document.getElementById("la").innerHTML = quiz.questions[quiz.current_question].answers.a;
