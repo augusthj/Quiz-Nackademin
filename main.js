@@ -72,7 +72,8 @@ function showRestOfQuestion(){
         document.getElementById("ld").innerHTML = quiz.questions[quiz.current_question].answer.d;
         quiz.current_question += 1;
         }else{
-            alert(" Spelet är slut");
+           document.getElementById("question").style.display = "none";
+            document.getElementById("result").style.display = "block";
         }
 
 }
