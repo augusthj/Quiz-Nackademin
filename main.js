@@ -12,7 +12,19 @@ class Quiz{
 
     loadQuestions(incomingQuestions) {
         for(var i=0; i<this.amount; i++){
-         this.questions.push(incomingQuestions[i]);
+
+            var newQuestion = new Question;
+            newQuestion.ask = incomingQuestions[i].question;
+            newQuestion.answers = incomingQuestions[i].answer;
+            newQuestion.correctAnswer = incomingQuestions[i].correctAnswer;
+            console.log(newQuestion.answers);
+            console.log(incomingQuestions[i]);
+            console.log(newQuestion.correctAnswer);
+
+
+
+
+            this.questions.push(newQuestion);
 
         }
         console.log(this.questions);
@@ -25,16 +37,12 @@ class Question{
     constructor(){
     this.category = "";
     this.ask = "";
-    this.answers = [];
+    this.answers = {};
+    this.correctAnswer = [];
     }
 }
 
-class Answer{
-    constructor(){
-        this.text = "";
-        this.isCorrect = false;
-    }
-}
+
 var quiz = new Quiz();
 function hideMain(){
     document.getElementById("main").style.display = "none";
@@ -50,11 +58,11 @@ function hideMain(){
 
 function showQuestion(){
     if(quiz.current_question <= quiz.amount){
-    document.getElementById("ask").innerHTML = quiz.questions[quiz.current_question].question;
-    document.getElementById("la").innerHTML = quiz.questions[quiz.current_question].answer.a;
-    document.getElementById("lb").innerHTML = quiz.questions[quiz.current_question].answer.b;
-    document.getElementById("lc").innerHTML = quiz.questions[quiz.current_question].answer.c;
-    document.getElementById("ld").innerHTML = quiz.questions[quiz.current_question].answer.d;
+    document.getElementById("ask").innerHTML = quiz.questions[quiz.current_question].ask;
+    document.getElementById("la").innerHTML = quiz.questions[quiz.current_question].answers.a;
+    document.getElementById("lb").innerHTML = quiz.questions[quiz.current_question].answers.b;
+    document.getElementById("lc").innerHTML = quiz.questions[quiz.current_question].answers.c;
+    document.getElementById("ld").innerHTML = quiz.questions[quiz.current_question].answers.d;
     quiz.current_question += 1;
     }
 }
@@ -64,13 +72,19 @@ function showRestOfQuestion(){
         alert("Du har inte fyllt i något");
         return;
     }
+    console.log(document.getElementById("a").checked);
+    console.log(document.getElementById("b").checked);
+    console.log(document.getElementById("c").checked);
+    console.log(document.getElementById("d").checked);
+    console.log()
     if(quiz.current_question < quiz.amount){
-        document.getElementById("ask").innerHTML = quiz.questions[quiz.current_question].question;
-        document.getElementById("la").innerHTML = quiz.questions[quiz.current_question].answer.a;
-        document.getElementById("lb").innerHTML = quiz.questions[quiz.current_question].answer.b;
-        document.getElementById("lc").innerHTML = quiz.questions[quiz.current_question].answer.c;
-        document.getElementById("ld").innerHTML = quiz.questions[quiz.current_question].answer.d;
+        document.getElementById("ask").innerHTML = quiz.questions[quiz.current_question].ask;
+        document.getElementById("la").innerHTML = quiz.questions[quiz.current_question].answers.a;
+        document.getElementById("lb").innerHTML = quiz.questions[quiz.current_question].answers.b;
+        document.getElementById("lc").innerHTML = quiz.questions[quiz.current_question].answers.c;
+        document.getElementById("ld").innerHTML = quiz.questions[quiz.current_question].answers.d;
         quiz.current_question += 1;
+
         }else{
            document.getElementById("question").style.display = "none";
             document.getElementById("result").style.display = "block";
@@ -95,7 +109,7 @@ function hasAnswered(){
 function loadJSON(file, callback) {
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
-    xobj.open('GET', 'https://www.mocky.io/v2/5da0ac863000007000f8a037', true);
+    xobj.open('GET', 'https://www.mocky.io/v2/5da4b1c23500006d004a78a8', true);
     xobj.onreadystatechange = function() {
       if (xobj.readyState == 4 && xobj.status == "200") {
         callback(xobj.responseText);
@@ -105,7 +119,7 @@ function loadJSON(file, callback) {
   }
 
   var myQuestions = "";
-  loadJSON('https://www.mocky.io/v2/5da0ac863000007000f8a037', function(response) {
+  loadJSON('https://www.mocky.io/v2/5da4b1c23500006d004a78a8', function(response) {
      myQuestions = JSON.parse(response);
   });
   

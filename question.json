@@ -1,4 +1,4 @@
-{"myQuestion" : [
+ [
     {
         "question": "Vilket år landade första människan på månen?",
         "answer": {
@@ -7,7 +7,7 @@
             "c": "1969",
             "d": "1951"
                 },
-        "correctAnswer": "c"
+        "correctAnswer": ["c"]
     }, 
     {
         "question": "Vilken är den starkaste chilin i världen?",
@@ -17,7 +17,7 @@
             "c": "Carolina Reaper",
             "d": "Jalapeno"
                 },
-        "correctAnswer": "c"
+        "correctAnswer": ["c"]
     }, 
     {
         "question": "Vilket år föll berlinmuren?",
@@ -27,7 +27,7 @@
             "c": "1993",
             "d": "1988"
                  },
-        "correctAnswer": "a"
+        "correctAnswer": ["a", "b"]
     }
 
-]}
+]
