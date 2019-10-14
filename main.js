@@ -59,6 +59,35 @@ function showQuestion(){
     }
 }
 
+function showRestOfQuestion(){
+    if(hasAnswered() == false){
+        alert("Du har inte fyllt i något");
+        return;
+    }
+    if(quiz.current_question < quiz.amount){
+        document.getElementById("ask").innerHTML = quiz.questions[quiz.current_question].question;
+        document.getElementById("la").innerHTML = quiz.questions[quiz.current_question].answer.a;
+        document.getElementById("lb").innerHTML = quiz.questions[quiz.current_question].answer.b;
+        document.getElementById("lc").innerHTML = quiz.questions[quiz.current_question].answer.c;
+        document.getElementById("ld").innerHTML = quiz.questions[quiz.current_question].answer.d;
+        quiz.current_question += 1;
+        }else{
+            alert(" Spelet är slut");
+        }
+
+}
+
+function hasAnswered(){
+    if(  document.getElementById("a").checked == true ||
+         document.getElementById("b").checked == true ||
+         document.getElementById("c").checked == true ||
+         document.getElementById("d").checked == true){
+             return true;
+         }
+    return false;
+}
+
+
 
 
 
