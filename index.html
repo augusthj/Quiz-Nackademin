@@ -14,7 +14,7 @@
                                 <p>Skriv in ditt namn och hur mångra frågor du vill besvara</p>
                                 <input type="text" id="namn" value="august"> 
                                 <input type="text" id="antal" value="3">
-                                <input type="button" id="submitB" onclick="hideMain();" value="Submit">
+                                <input type="button" id="submitB" onclick="hideMain();" value="Starta">
                         </form>
                 </div>
                 <div id="question">
@@ -23,18 +23,20 @@
                         <p id="test"></p>
 
                         <div id="submit">
-                                <input type="button" value="Submit" onclick="showRestOfQuestion();">
+                                <p>Kategori: <span id="category">category</span></p>
                                 <p id="ask">fråge text</p>
                                 <input type="checkbox" name="box" id="a"><label id="la" for="a">alternativ a</label><br>
                                 <input type="checkbox" name="box" id="b"><label id="lb" for="b">alternativ b</label><br>
                                 <input type="checkbox" name="box" id="c"><label id="lc" for="c">alternativ c</label><br>
+                                <input type="button" value="Svara" onclick="showRestOfQuestion();">
                         </div>
                         </td>
                         </tr>
                 </div>
                 <div id="result">
                         <p>Spelet är slut!</p>
-                        <p>Du fick <span id="right">0</span> rätt och <span id="wrong">0</span> fel.</p>
+                        <p><span id="namn2">namn</span> fick <span id="right">0</span> rätt och <span id="wrong">0</span>
+                        fel utav <span id="total">0</span> frågor.</p>
 
                 </div>
         </div>

@@ -5,7 +5,6 @@ class Quiz{
         this.name ="";
         this.questions = [];
         this.rightCounter = 0;
-        this.wrongCounter = 0;
         this.amount = 0;
         this.current_question = 0;
     }
@@ -17,6 +16,7 @@ class Quiz{
             newQuestion.ask = incomingQuestions[i].question;
             newQuestion.answers = incomingQuestions[i].answer;
             newQuestion.correctAnswer = incomingQuestions[i].correctAnswer;
+            newQuestion.category = incomingQuestions[i].category;
 
 
             this.questions.push(newQuestion);
@@ -53,10 +53,12 @@ function hideMain(){
 
 function showQuestion(){
     if(quiz.current_question <= quiz.amount){
+    document.getElementById("category").innerHTML = quiz.questions[quiz.current_question].category;
     document.getElementById("ask").innerHTML = quiz.questions[quiz.current_question].ask;
     document.getElementById("la").innerHTML = quiz.questions[quiz.current_question].answers.a;
     document.getElementById("lb").innerHTML = quiz.questions[quiz.current_question].answers.b;
     document.getElementById("lc").innerHTML = quiz.questions[quiz.current_question].answers.c;
+    console.log(quiz.questions[quiz.current_question].category);
     }
 }
 
@@ -65,11 +67,13 @@ function showRestOfQuestion(){
         alert("Du har inte fyllt i något");
         return;
     }
-
     checkAnswers();
-
     if(quiz.current_question < quiz.amount-1){
         quiz.current_question += 1;
+        document.getElementById("a").checked = false;
+        document.getElementById("b").checked = false;
+        document.getElementById("c").checked = false;               
+        document.getElementById("category").innerHTML = quiz.questions[quiz.current_question].category;
         document.getElementById("ask").innerHTML = quiz.questions[quiz.current_question].ask;
         document.getElementById("la").innerHTML = quiz.questions[quiz.current_question].answers.a;
         document.getElementById("lb").innerHTML = quiz.questions[quiz.current_question].answers.b;
@@ -82,8 +86,10 @@ function showRestOfQuestion(){
         console.log(quiz.rightCounter);
         document.getElementById("right").innerHTML = quiz.rightCounter;
         document.getElementById("wrong").innerHTML = quiz.amount - quiz.rightCounter;
+        document.getElementById("namn2").innerHTML = quiz.name;
+        document.getElementById("total").innerHTML = quiz.amount; 
     }
-
+    console.log(quiz.questions[quiz.current_question].category);
 }
 
 function hasAnswered(){
@@ -151,7 +157,7 @@ function checkAnswers(){
 function loadJSON(file, callback) {
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
-    xobj.open('GET', 'https://www.mocky.io/v2/5da889991200004411edafcd', true);
+    xobj.open('GET', 'https://www.mocky.io/v2/5da897241200004411edb02e', true);
     xobj.onreadystatechange = function() {
       if (xobj.readyState == 4 && xobj.status == "200") {
         callback(xobj.responseText);
@@ -161,7 +167,7 @@ function loadJSON(file, callback) {
   }
 
   var myQuestions = "";
-  loadJSON('https://www.mocky.io/v2/5da889991200004411edafcd', function(response) {
+  loadJSON('https://www.mocky.io/v2/5da897241200004411edb02e', function(response) {
      myQuestions = JSON.parse(response);
   });
   
