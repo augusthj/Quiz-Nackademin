@@ -67,6 +67,7 @@ function showRestOfQuestion(){
     }
 
     checkAnswers();
+
     if(quiz.current_question < quiz.amount-1){
         quiz.current_question += 1;
         document.getElementById("ask").innerHTML = quiz.questions[quiz.current_question].ask;
@@ -78,6 +79,8 @@ function showRestOfQuestion(){
     }else{
         document.getElementById("question").style.display = "none";
         document.getElementById("result").style.display = "block";
+        console.log(quiz.rightCounter);
+        document.getElementById("right").innerHTML = quiz.rightCounter;
     }
 
 }
@@ -96,48 +99,48 @@ function checkAnswers(){
         if(document.getElementById("a").checked == true &&
         document.getElementById("b").checked == false &&
         document.getElementById("c").checked == false ){
-            alert("rätt");
+            quiz.rightCounter += 1;
         }
 
     }else if(quiz.questions[quiz.current_question].correctAnswer == "b"){
         if(document.getElementById("a").checked == false &&
         document.getElementById("b").checked == true &&
         document.getElementById("c").checked == false ){
-            alert("rätt");
+            quiz.rightCounter += 1;
         }
 
     }else if ( quiz.questions[quiz.current_question].correctAnswer == "c"){
         if(document.getElementById("a").checked == false &&
         document.getElementById("b").checked == false &&
         document.getElementById("c").checked == true ){
-            alert("rätt");
+            quiz.rightCounter += 1;
         }
     }else if ( quiz.questions[quiz.current_question].correctAnswer == ["a", "b"]){
         if(document.getElementById("a").checked == true &&
         document.getElementById("b").checked == true &&
         document.getElementById("c").checked == false ){
-            alert("rätt");
+            quiz.rightCounter += 1;
         }
 
     }else if ( quiz.questions[quiz.current_question].correctAnswer == ["a", "c"]){
         if(document.getElementById("a").checked == true &&
         document.getElementById("b").checked == false &&
         document.getElementById("c").checked == true ){
-            alert("rätt");
+            quiz.rightCounter += 1;
         }
 
     }else if ( quiz.questions[quiz.current_question].correctAnswer == ["b","c"]){
         if(document.getElementById("a").checked == false &&
         document.getElementById("b").checked == true &&
         document.getElementById("c").checked == true ){
-            alert("rätt");
+            quiz.rightCounter += 1;
         }
 
     }else if ( quiz.questions[quiz.current_question].correctAnswer == ["a","b","c"]){
         if(document.getElementById("a").checked == true &&
         document.getElementById("b").checked == true &&
         document.getElementById("c").checked == true ){
-            alert("rätt");
+            quiz.rightCounter += 1;
         }
     }
 }
