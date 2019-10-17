@@ -40,6 +40,12 @@ class Question{
 
 var quiz = new Quiz();
 function hideMain(){
+    var numberCheck = document.getElementById("antal").value;
+    console.log(numberCheck);
+    if(isNaN(numberCheck) == true || numberCheck > 10 || numberCheck <= 0){
+        alert("Fyll i ett tal mellan 1 - 10");
+        return;
+    }
     document.getElementById("main").style.display = "none";
     var name = document.getElementById("namn").value;
     var amount = document.getElementById("antal").value;
