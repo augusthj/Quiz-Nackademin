@@ -57,8 +57,6 @@ function showQuestion(){
     document.getElementById("la").innerHTML = quiz.questions[quiz.current_question].answers.a;
     document.getElementById("lb").innerHTML = quiz.questions[quiz.current_question].answers.b;
     document.getElementById("lc").innerHTML = quiz.questions[quiz.current_question].answers.c;
-    document.getElementById("ld").innerHTML = quiz.questions[quiz.current_question].answers.d;
-    quiz.current_question += 1;
     }
 }
 
@@ -67,72 +65,89 @@ function showRestOfQuestion(){
         alert("Du har inte fyllt i något");
         return;
     }
-    console.log(document.getElementById("a").checked);
-    console.log(document.getElementById("b").checked);
-    console.log(document.getElementById("c").checked);
-    console.log(document.getElementById("d").checked);
-    console.log(quiz.questions[quiz.current_question].correctAnswer);
 
-    // If a is right answer,
-    // and you have answer a is right.
-    // And you have answer b is wrong.
-    // And you have answer c is wrong.
-    // And you have answer d is wrong.
-    // Then you get the answer right.
-    if ( quiz.questions[quiz.current_question].correctAnswer == "a"){
-
-    }else if(quiz.questions[quiz.current_question].correctAnswer == "b"){
-
-    }else if ( quiz.questions[quiz.current_question].correctAnswer == "c"){
-        if(document.getElementById("a").checked == false &&
-        document.getElementById("b").checked == false &&
-        document.getElementById("c").checked == true &&
-        document.getElementById("d").checked == false  ){
-            alert("rätt");
-        }
-    }else if ( quiz.questions[quiz.current_question].correctAnswer == ["a", "b"]){
-
-    }else if ( quiz.questions[quiz.current_question].correctAnswer == ["a", "c"]){
-
-    }else if ( quiz.questions[quiz.current_question].correctAnswer == ["b","c"]){
-
-    }else if ( quiz.questions[quiz.current_question].correctAnswer == ["a","b","c"]){
-        
-    }
-
-    if(quiz.current_question < quiz.amount){
+    checkAnswers();
+    if(quiz.current_question < quiz.amount-1){
+        quiz.current_question += 1;
         document.getElementById("ask").innerHTML = quiz.questions[quiz.current_question].ask;
         document.getElementById("la").innerHTML = quiz.questions[quiz.current_question].answers.a;
         document.getElementById("lb").innerHTML = quiz.questions[quiz.current_question].answers.b;
         document.getElementById("lc").innerHTML = quiz.questions[quiz.current_question].answers.c;
-        document.getElementById("ld").innerHTML = quiz.questions[quiz.current_question].answers.d;
-        quiz.current_question += 1;
+        
 
-        }else{
-           document.getElementById("question").style.display = "none";
-            document.getElementById("result").style.display = "block";
-        }
+    }else{
+        document.getElementById("question").style.display = "none";
+        document.getElementById("result").style.display = "block";
+    }
 
 }
 
 function hasAnswered(){
     if(  document.getElementById("a").checked == true ||
          document.getElementById("b").checked == true ||
-         document.getElementById("c").checked == true ||
-         document.getElementById("d").checked == true){
+         document.getElementById("c").checked == true){
              return true;
          }
     return false;
 }
 
+function checkAnswers(){
+    if ( quiz.questions[quiz.current_question].correctAnswer == "a"){
+        if(document.getElementById("a").checked == true &&
+        document.getElementById("b").checked == false &&
+        document.getElementById("c").checked == false ){
+            alert("rätt");
+        }
 
+    }else if(quiz.questions[quiz.current_question].correctAnswer == "b"){
+        if(document.getElementById("a").checked == false &&
+        document.getElementById("b").checked == true &&
+        document.getElementById("c").checked == false ){
+            alert("rätt");
+        }
+
+    }else if ( quiz.questions[quiz.current_question].correctAnswer == "c"){
+        if(document.getElementById("a").checked == false &&
+        document.getElementById("b").checked == false &&
+        document.getElementById("c").checked == true ){
+            alert("rätt");
+        }
+    }else if ( quiz.questions[quiz.current_question].correctAnswer == ["a", "b"]){
+        if(document.getElementById("a").checked == true &&
+        document.getElementById("b").checked == true &&
+        document.getElementById("c").checked == false ){
+            alert("rätt");
+        }
+
+    }else if ( quiz.questions[quiz.current_question].correctAnswer == ["a", "c"]){
+        if(document.getElementById("a").checked == true &&
+        document.getElementById("b").checked == false &&
+        document.getElementById("c").checked == true ){
+            alert("rätt");
+        }
+
+    }else if ( quiz.questions[quiz.current_question].correctAnswer == ["b","c"]){
+        if(document.getElementById("a").checked == false &&
+        document.getElementById("b").checked == true &&
+        document.getElementById("c").checked == true ){
+            alert("rätt");
+        }
+
+    }else if ( quiz.questions[quiz.current_question].correctAnswer == ["a","b","c"]){
+        if(document.getElementById("a").checked == true &&
+        document.getElementById("b").checked == true &&
+        document.getElementById("c").checked == true ){
+            alert("rätt");
+        }
+    }
+}
 
 
 
 function loadJSON(file, callback) {
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
-    xobj.open('GET', 'https://www.mocky.io/v2/5da4b1c23500006d004a78a8', true);
+    xobj.open('GET', 'https://www.mocky.io/v2/5da889991200004411edafcd', true);
     xobj.onreadystatechange = function() {
       if (xobj.readyState == 4 && xobj.status == "200") {
         callback(xobj.responseText);
@@ -142,7 +157,7 @@ function loadJSON(file, callback) {
   }
 
   var myQuestions = "";
-  loadJSON('https://www.mocky.io/v2/5da4b1c23500006d004a78a8', function(response) {
+  loadJSON('https://www.mocky.io/v2/5da889991200004411edafcd', function(response) {
      myQuestions = JSON.parse(response);
   });
   

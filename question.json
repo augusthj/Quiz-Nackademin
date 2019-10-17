@@ -4,8 +4,7 @@
         "answer": {
             "a": "1946",
             "b": "1957",
-            "c": "1969",
-            "d": "1951"
+            "c": "1969"
                 },
         "correctAnswer": ["c"]
     }, 
@@ -14,8 +13,7 @@
         "answer": {
             "a": "Ghost pepper",
             "b": "Trinidad Moruga Scorpion",
-            "c": "Carolina Reaper",
-            "d": "Jalapeno"
+            "c": "Carolina Reaper"
                 },
         "correctAnswer": ["c"]
     }, 
@@ -24,10 +22,72 @@
         "answer": {
             "a": "1991",
             "b": "1989",
-            "c": "1993",
-            "d": "1988"
+            "c": "1993"
                  },
+        "correctAnswer": ["b"]
+    },
+    {
+        "question": "Vilket tal är jämnt?",
+        "answer": {
+            "a": "2",
+            "b": "11",
+            "c": "16"
+                },
+        "correctAnswer": ["a", "c"]
+    }, 
+    {
+        "question": "Vilka färger består svenska flaggan av?",
+        "answer": {
+            "a": "Gul",
+            "b": "Blå",
+            "c": "Grön"
+                },
         "correctAnswer": ["a", "b"]
+    }, 
+    {
+        "question": "Hur stor är jordens omkrets i km?",
+        "answer": {
+            "a": "38 230km",
+            "b": "40 075km",
+            "c": "42 125km"
+                },
+        "correctAnswer": ["b"]
+    }, 
+    {
+        "question": "Vilken är den starkaste chilin i världen?",
+        "answer": {
+            "a": "Ghost pepper",
+            "b": "Trinidad Moruga Scorpion",
+            "c": "Carolina Reaper"
+                },
+        "correctAnswer": ["c"]
+    }, 
+    {
+        "question": "Vilken är den starkaste chilin i världen?",
+        "answer": {
+            "a": "Ghost pepper",
+            "b": "Trinidad Moruga Scorpion",
+            "c": "Carolina Reaper"
+                },
+        "correctAnswer": ["c"]
+    }, 
+    {
+        "question": "Vilken är den starkaste chilin i världen?",
+        "answer": {
+            "a": "Ghost pepper",
+            "b": "Trinidad Moruga Scorpion",
+            "c": "Carolina Reaper"
+                },
+        "correctAnswer": ["c"]
+    }, 
+    {
+        "question": "Vilken är den starkaste chilin i världen?",
+        "answer": {
+            "a": "Ghost pepper",
+            "b": "Trinidad Moruga Scorpion",
+            "c": "Carolina Reaper"
+                },
+        "correctAnswer": ["c"]
     }
 
 ]
