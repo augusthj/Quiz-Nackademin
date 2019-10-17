@@ -81,6 +81,7 @@ function showRestOfQuestion(){
         document.getElementById("result").style.display = "block";
         console.log(quiz.rightCounter);
         document.getElementById("right").innerHTML = quiz.rightCounter;
+        document.getElementById("wrong").innerHTML = quiz.amount - quiz.rightCounter;
     }
 
 }
