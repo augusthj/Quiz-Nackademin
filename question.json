@@ -1,0 +1,103 @@
+ [
+    {
+        "question": "Vilket år landade första människan på månen?",
+        "answer": {
+            "a": "1946",
+            "b": "1957",
+            "c": "1969"
+                },
+        "correctAnswer": ["c"],
+        "category": "Vetenskap"
+    }, 
+    {
+        "question": "Vilken är den starkaste chilin i världen?",
+        "answer": {
+            "a": "Ghost pepper",
+            "b": "Trinidad Moruga Scorpion",
+            "c": "Carolina Reaper"
+                },
+        "correctAnswer": ["c"],
+        "category": "Mat"
+    }, 
+    {
+        "question": "Vilket år föll berlinmuren?",
+        "answer": {
+            "a": "1991",
+            "b": "1989",
+            "c": "1993"
+                 },
+        "correctAnswer": ["b"],
+        "category": "Historia"
+    },
+    {
+        "question": "Vilket tal är jämnt?",
+        "answer": {
+            "a": "2",
+            "b": "11",
+            "c": "16"
+                },
+        "correctAnswer": ["a", "c"],
+        "category": "Vetenskap"
+    }, 
+    {
+        "question": "Vilka färger består svenska flaggan av?",
+        "answer": {
+            "a": "Gul",
+            "b": "Blå",
+            "c": "Grön"
+                },
+        "correctAnswer": ["a", "b"],
+        "category": "Kultur"
+    }, 
+    {
+        "question": "Hur stor är jordens omkrets i km?",
+        "answer": {
+            "a": "38 230km",
+            "b": "40 075km",
+            "c": "42 125km"
+                },
+        "correctAnswer": ["b"],
+        "category": "Vetenskap"
+    }, 
+    {
+        "question": "Vilken är den starkaste chilin i världen?",
+        "answer": {
+            "a": "Ghost pepper",
+            "b": "Trinidad Moruga Scorpion",
+            "c": "Carolina Reaper"
+                },
+        "correctAnswer": ["c"],
+        "category": "Vetenskap"
+    }, 
+    {
+        "question": "Vilken är den starkaste chilin i världen?",
+        "answer": {
+            "a": "Ghost pepper",
+            "b": "Trinidad Moruga Scorpion",
+            "c": "Carolina Reaper"
+                },
+        "correctAnswer": ["c"],
+        "category": "Vetenskap"
+    }, 
+    {
+        "question": "Vilken är den starkaste chilin i världen?",
+        "answer": {
+            "a": "Ghost pepper",
+            "b": "Trinidad Moruga Scorpion",
+            "c": "Carolina Reaper"
+                },
+        "correctAnswer": ["c"],
+        "category": "Vetenskap"
+    }, 
+    {
+        "question": "Vilken är den starkaste chilin i världen?",
+        "answer": {
+            "a": "Ghost pepper",
+            "b": "Trinidad Moruga Scorpion",
+            "c": "Carolina Reaper"
+                },
+        "correctAnswer": ["c"],
+        "category": "Vetenskap"
+    }
+
+]
