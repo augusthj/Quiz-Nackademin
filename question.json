@@ -50,7 +50,7 @@
         "category": "Kultur"
     }, 
     {
-        "question": "Hur stor är jordens omkrets i km?",
+        "question": "Vad är jordens omkrets i km?",
         "answer": {
             "a": "38 230km",
             "b": "40 075km",
@@ -60,44 +60,44 @@
         "category": "Vetenskap"
     }, 
     {
-        "question": "Vilken är den starkaste chilin i världen?",
+        "question": "Vad är det engelska ordet för gepard?",
         "answer": {
-            "a": "Ghost pepper",
-            "b": "Trinidad Moruga Scorpion",
-            "c": "Carolina Reaper"
+            "a": "Cheetah",
+            "b": "Cougar",
+            "c": "Jaguar"
                 },
-        "correctAnswer": ["c"],
-        "category": "Vetenskap"
+        "correctAnswer": ["a"],
+        "category": "Djur"
     }, 
     {
-        "question": "Vilken är den starkaste chilin i världen?",
+        "question": "Vad heter huvudstated i Sydkorea?",
         "answer": {
-            "a": "Ghost pepper",
-            "b": "Trinidad Moruga Scorpion",
-            "c": "Carolina Reaper"
+            "a": "Pyongyang",
+            "b": "Busan",
+            "c": "Seoul"
                 },
         "correctAnswer": ["c"],
-        "category": "Vetenskap"
+        "category": "Geografi"
     }, 
     {
-        "question": "Vilken är den starkaste chilin i världen?",
+        "question": "Hur många invånare har finland?",
         "answer": {
-            "a": "Ghost pepper",
-            "b": "Trinidad Moruga Scorpion",
-            "c": "Carolina Reaper"
+            "a": "5,5 Miljoner",
+            "b": "4,3 Miljoner",
+            "c": "7,4 Miljoner"
                 },
         "correctAnswer": ["c"],
-        "category": "Vetenskap"
+        "category": "Geografi"
     }, 
     {
-        "question": "Vilken är den starkaste chilin i världen?",
+        "question": "Vilket år blev Gustav Vasa kung över Sverige?",
         "answer": {
-            "a": "Ghost pepper",
-            "b": "Trinidad Moruga Scorpion",
-            "c": "Carolina Reaper"
+            "a": "1632",
+            "b": "1523",
+            "c": "1457"
                 },
-        "correctAnswer": ["c"],
-        "category": "Vetenskap"
+        "correctAnswer": ["b"],
+        "category": "Historia"
     }
 
 ]

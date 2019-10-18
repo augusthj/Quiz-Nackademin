@@ -166,7 +166,7 @@ function checkAnswers(){
 function loadJSON(file, callback) {
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
-    xobj.open('GET', 'https://www.mocky.io/v2/5da897241200004411edb02e', true);
+    xobj.open('GET', 'https://www.mocky.io/v2/5da9b4023100000e004e0b21', true);
     xobj.onreadystatechange = function() {
       if (xobj.readyState == 4 && xobj.status == "200") {
         callback(xobj.responseText);
@@ -176,7 +176,7 @@ function loadJSON(file, callback) {
   }
 
   var myQuestions = "";
-  loadJSON('https://www.mocky.io/v2/5da897241200004411edb02e', function(response) {
+  loadJSON('https://www.mocky.io/v2/5da9b4023100000e004e0b21', function(response) {
      myQuestions = JSON.parse(response);
   });
   
