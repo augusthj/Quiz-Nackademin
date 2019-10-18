@@ -1,5 +1,4 @@
-//• Skriv klassen Quiz. Den ska hålla reda på användarens namn,
-// frågorna som ingår och hur många frågor som har besvarats korrekt/felaktigt.
+// Class containing user name, the questions and how many questions the user have answered.
 class Quiz{
     constructor(){
         this.name ="";
@@ -9,6 +8,7 @@ class Quiz{
         this.current_question = 0;
     }
 
+// Reads in the file from prase JSON file that cointain all the questions and answers and categorys.
     loadQuestions(incomingQuestions) {
         for(var i=0; i<this.amount; i++){
 
@@ -26,8 +26,7 @@ class Quiz{
     }
 }
 
-//Den ska hålla reda på frågekategori, 
-//fråga, svarsalternativ och om svarsalternativet är korrekt eller inte.
+// Class containing category, the question, the answers and if the user answer is right.
 class Question{
     constructor(){
     this.category = "";
@@ -37,7 +36,8 @@ class Question{
     }
 }
 
-
+// Force the user to enter a name and amount of question before starting the game.
+// And reads in the questions and answers and displays the first questions.
 var quiz = new Quiz();
 function hideMain(){
     var numberCheck = document.getElementById("antal").value;
@@ -60,6 +60,7 @@ function hideMain(){
 
 }
 
+// Displays the first question.
 function showQuestion(){
     if(quiz.current_question <= quiz.amount){
     document.getElementById("category").innerHTML = quiz.questions[quiz.current_question].category;
@@ -71,11 +72,15 @@ function showQuestion(){
     }
 }
 
+// Force the user to mark an answer before clicking next question.
 function showRestOfQuestion(){
     if(hasAnswered() == false){
         alert("Du har inte fyllt i något");
         return;
     }
+    
+    // Unchecks the boxes and read in the new question and answers for the user.
+    // And presents the data for the user when the game is finished.
     checkAnswers();
     if(quiz.current_question < quiz.amount-1){
         quiz.current_question += 1;
@@ -101,6 +106,7 @@ function showRestOfQuestion(){
     console.log(quiz.questions[quiz.current_question].category);
 }
 
+// Check if the user have checked any boxes.
 function hasAnswered(){
     if(  document.getElementById("a").checked == true ||
          document.getElementById("b").checked == true ||
@@ -110,6 +116,7 @@ function hasAnswered(){
     return false;
 }
 
+// Compare if the answer is right or not.
 function checkAnswers(){
     if ( quiz.questions[quiz.current_question].correctAnswer == "a"){
         if(document.getElementById("a").checked == true &&
@@ -162,7 +169,7 @@ function checkAnswers(){
 }
 
 
-
+// Gets the JSON file from the link, converts it to object.
 function loadJSON(file, callback) {
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
